@@ -1,10 +1,10 @@
-package loops;
+package exercise;
 
 public class ClassTest1 {
 
     /*
     * main
-    * */
+    */
     public static void main(String[] args){
         ClassTest1 classTest1 = new ClassTest1();
 
