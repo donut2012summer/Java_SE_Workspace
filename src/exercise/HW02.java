@@ -18,6 +18,16 @@ public class HW02 {
         HW02.printNumberTriangle();
         // 7.
         HW02.printAlphabet();
+        // 8.
+        HW02.printMultiplesOfFour();
+        // 9.
+        HW02.printOneToTen();
+        // 10.
+        HW02.printNine1();
+        // 11.
+        HW02.printNine2();
+        // 12.
+//        HW02.printNine3();
 
     }
     /*
@@ -30,11 +40,13 @@ public class HW02 {
 
         // from 1 to number
         for(int i = 1; i <= number; i++){
+
             // cal even
             if(i % 2 == 0){
                 sum += i;
             }
         }
+
         System.out.printf("1. 1~1000的偶數和為%d%n", sum);
 
     }
@@ -79,6 +91,7 @@ public class HW02 {
     */
     public static void printNumber(){
         System.out.printf("4. ");
+
         for(int i = 1; i <= 10; i++){
            System.out.printf("%d ", (int)Math.pow(i, 2));
         }
@@ -99,6 +112,7 @@ public class HW02 {
         // digits contains 4 -> i % 10 ==4
         // ten digits contains 4 -> i / 40 >= 1
         for(int i = 1; i<=49; i++){
+
             // skip the conditions which contains 4
             if(i % 10 == 4 || i / 40 >= 1) continue;
             //if(String.valueOf(i).contains("4")) continue;
@@ -125,11 +139,13 @@ public class HW02 {
     public static void printNumberTriangle(){
 
         // print vertically
-        for(int y = 10; y > 0; y--){
+        for(int i = 10; i > 0; i--){
+
             // print horizontally
-            for(int x = 1; x <= y; x++){
-                System.out.printf("%d ", x);
+            for(int j = 1; j <= i; j++){
+                System.out.printf("%d ", j);
             }
+
             System.out.println();
         }
     }
@@ -144,18 +160,160 @@ public class HW02 {
     */
     public static void printAlphabet(){
 
-        // parse int char A into integer
-        int alphabet = 'A';
+        // print vertically 0 - 5 ( 6 times
+        for(int i = 0; i < 6; i++){
+
+            // print horizontally 0 - 5 ( 6 times
+            for(int j = 0; j <= i; j++){
+
+                // print String
+                System.out.print((char)('A' + i));
+            }
+
+            System.out.println();
+        }
+    }
+
+    /*
+     * 8. 印出0~100中，四的倍數
+     */
+    public static void printMultiplesOfFour(){
+
+        // print from 0 to 100
+        for (int i = 0; i <= 100; i +=4){
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+
+    /*
+     * 9. print 1+...10 by three loop types
+     */
+    public static void printOneToTen(){
+
+        int sum = 0;
+
+        System.out.println("for loop");
+        for(int i = 1; i<=10; i++){
+            // calculate
+            sum += i;
+
+            // print 1+2+.... +
+            System.out.print(i + "+ ");
+
+            // print 10 = sum
+            if(i == 10) {
+                System.out.print(i + "= " + sum + "\n");
+            }
+
+        }
+
+        System.out.println("while loop");
+        sum = 0;
+        int i = 1;
+
+        while(i <= 10){
+            // calculate
+            sum += i;
+
+            // print 1+2+3...
+            System.out.print(i + "+ ");
+
+            // print 10 = sum
+            if(i == 10){
+                System.out.print(i + "= " + sum + "\n");
+            }
+
+            i++;
+        }
+
+        System.out.println("do while loop");
+        sum =0;
+        int j = 1;
+
+        do{
+            // calculate
+            sum += j;
+
+            // print 1+2+3...+
+            System.out.print(j + "+ ");
+
+            // print 10 = sum
+            if ( j == 10){
+                System.out.print(j + "= " + sum + "\n");
+            }
+
+            j++;
+        }while(j <= 10);
+
+    }
+
+    /*
+     * 10. 九九乘法表 for+while
+     */
+    public static void printNine1(){
 
         // print vertically
-        for(int y = 1; y <= 5; y++){
+        for(int i = 2; i <=9; i++){
+            int j = 1;
             // print horizontally
-            for(int x = 1; x <= y; x++){
-                System.out.printf("%c", alphabet);
+            while(j <=9){
+                // print i + j = ij
+                System.out.printf("%d * %d = %2d \t", i, j, (i * j));
+                j++;
             }
             System.out.println();
-            alphabet++;
         }
+    }
+
+    /*
+     * 11. 九九乘法表 for+do while
+     */
+
+    public static void printNine2(){
+
+        // print vertically
+        for(int i = 2; i <= 9; i++){
+
+            int j = 1;
+
+            // print horizontally
+            do{
+
+                // print i * j = ij
+                System.out.printf("%d * %d = %2d \t", i, j, (i * j));
+                j++;
+
+            }while(j <= 9);
+            System.out.println();
+        }
+    }
+
+    /*
+     * 12. 九九乘法表 while+do while
+     * be careful of the 3 key elements of loop initial value; constraint; value change
+     */
+    public static void printNine3(){
+
+        int i = 2;
+
+        // print vertically
+        while(i <= 9){
+
+            int j = 1;
+
+            // print horizontally
+            do{
+                // i * j = ij
+                System.out.printf("%d * %d = %2d \t", i, j, (i * j));
+                j++;
+
+            }while(j <= 9);
+
+            System.out.println();
+            i++;
+        }
+
     }
 
     /* end */
