@@ -78,6 +78,34 @@ public class HW04 {
     }
 
     /*
+     * 2. 請建立一個字串,經過程式執行後,輸入結果是反過來的，並且大小寫不同
+     * 例如String s = "Hello World",執行結果即為dlroW olleH
+     * (提示:String方法,陣列)
+     * @param string
+     * */
+    public static void printReverse(final String sentence){
+        // Convert String to char array
+        char[] arr = sentence.toCharArray();
+
+        // iterate array and convert to reversed case
+        for( int i  = arr.length-1; i >= 0; i--){
+            // Store element for checking case
+            char el = arr[i];
+
+            if (Character.isLowerCase(el)){
+                // Convert the case and assigned to array[i]
+                arr[i] = Character.toUpperCase(el);
+
+            } else {
+                arr[i] = Character.toLowerCase(el);
+            }
+            // Print the element
+            System.out.print(arr[i]);
+        }
+    }
+
+
+    /*
     * 3. 有個字串陣列如下 (八大行星):
     * {"mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"}
     * 請用程式計算出這陣列裡面共有多少個母音(a, e, i, o, u)

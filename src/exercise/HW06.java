@@ -1,6 +1,7 @@
 package exercise;
 
-public class HW06 {
 
+
+public class HW06 {
 
 }

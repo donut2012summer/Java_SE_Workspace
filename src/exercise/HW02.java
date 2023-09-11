@@ -95,6 +95,7 @@ public class HW02 {
         for(int i = 1; i <= 10; i++){
            System.out.printf("%d ", (int)Math.pow(i, 2));
         }
+        System.out.print(Math.pow(10,2));
         System.out.println();
     }
     /*
@@ -165,7 +166,6 @@ public class HW02 {
 
             // print horizontally 0 - 5 ( 6 times
             for(int j = 0; j <= i; j++){
-
                 // print String
                 System.out.print((char)('A' + i));
             }
@@ -316,6 +316,12 @@ public class HW02 {
 
     }
 
+    /*
+    * 請用java設計高度為7的星星等腰三角形
+    * */
+    public static void printStartTriangle(){
+
+    }
     /* end */
 
 }
