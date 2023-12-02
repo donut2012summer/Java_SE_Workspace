@@ -24,7 +24,6 @@ public class HW01 {
         System.out.println("5 + \"5\" = " + (5+"5"));
     }
 
-
     /*
     * 1. 請設計一隻Java程式,計算12,6這兩個數值的和與積
     * @param numbers need to be calculated
@@ -32,6 +31,7 @@ public class HW01 {
     public static void sum(final int num1, final int num2){
 
         System.out.printf("1. %d,%d這兩個數值的和為%d, 乘積為%d%n", num1, num2, (num1 + num2), (num1 * num2));
+
     }
 
     /*
@@ -49,8 +49,8 @@ public class HW01 {
     */
     public static void calSeconds(final int totalSeconds){
         final int SECONDS_PER_MINUTE = 60;
-        final int SECONDS_PER_HOUR = 60 * 60;
-        final int SECONDS_PER_DAY = 60 * 60 * 24;
+        final int SECONDS_PER_HOUR   = 60 * 60;
+        final int SECONDS_PER_DAY    = 60 * 60 * 24;
 
         // how many days
         int days = totalSeconds / SECONDS_PER_DAY;

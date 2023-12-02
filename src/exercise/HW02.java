@@ -316,12 +316,6 @@ public class HW02 {
 
     }
 
-    /*
-    * 請用java設計高度為7的星星等腰三角形
-    * */
-    public static void printStartTriangle(){
-
-    }
     /* end */
 
 }
